@@ -23,8 +23,8 @@ let transport = {
   port: 465,
   secure: true,
   auth: {
-    user: //e-mail,
-    pass: // password
+    user: 'vladcancode@gmail.com',
+    pass: 'Sturmov1k'
   }
 };
 
@@ -40,8 +40,8 @@ app.post('/send-email', (req, res) => {
     console.log(message);
 
     let mail = {
-      from: //author
-      to:  //Change to email address that you want to receive messages on
+      from: 'vladcancode.com',
+      to: 'vladcancode@gmail.com',  //Change to email address that you want to receive messages on
       subject: 'New Message from Contact Form',
       text: `${email} writes: ${message}`
     }
