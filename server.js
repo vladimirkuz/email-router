@@ -19,15 +19,10 @@ app.use(morgan('tiny'));
 
 // nodemailer transport object
 let transport = {
-  host: "smtp-mail.outlook.com", // hostname
-    secureConnection: false, // TLS requires secureConnection to be false
-    port: 587, // port for secure SMTP
-    tls: {
-       ciphers:'SSLv3'
-    },
+    service: "hotmail",
     auth: {
-        user: 'vladykuz@hotmail.com',
-        pass: 'Radoslavch3k'
+        user: "vladykuz@hotmail.com",
+        pass: "Sturmov1k"
     }
 };
 
