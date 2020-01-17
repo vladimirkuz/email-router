@@ -21,7 +21,7 @@ app.use(morgan('tiny'));
 let transport = {
     service: "hotmail",
     auth: {
-        user: "vladykuz@hotmail.com",
+        user: "vladcancode@hotmail.com",
         pass: "Sturmov1k"
     }
 };
@@ -38,8 +38,8 @@ app.post('/send-email', (req, res) => {
     console.log(message);
 
     let mail = {
-      from: 'vladykuz@hotmail.com',
-      to: 'vladcancode@gmail.com',  //Change to email address that you want to receive messages on
+      from: 'vladcancode@hotmail.com',
+      to: 'vladcancode@hotmail.com',  //Change to email address that you want to receive messages on
       subject: 'New Message from Contact Form',
       text: `${email} writes: ${message}`
     }
