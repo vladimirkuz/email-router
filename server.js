@@ -41,7 +41,7 @@ app.post('/send-email', (req, res) => {
 
     let mail = {
       from: 'vladcancode.com',
-      to: 'vladcancode@gmail.com',  //Change to email address that you want to receive messages on
+      to: 'vladykuz@hotmail.com',  //Change to email address that you want to receive messages on
       subject: 'New Message from Contact Form',
       text: `${email} writes: ${message}`
     }
