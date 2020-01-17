@@ -19,13 +19,16 @@ app.use(morgan('tiny'));
 
 // nodemailer transport object
 let transport = {
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
-  auth: {
-    user: 'vladcancode@gmail.com',
-    pass: 'Sturmov1k'
-  }
+  host: "smtp-mail.outlook.com", // hostname
+    secureConnection: false, // TLS requires secureConnection to be false
+    port: 587, // port for secure SMTP
+    tls: {
+       ciphers:'SSLv3'
+    },
+    auth: {
+        user: 'vladykuz@hotmail.com',
+        pass: 'Radoslavch3k'
+    }
 };
 
 app.post('/send-email', (req, res) => {
@@ -41,7 +44,7 @@ app.post('/send-email', (req, res) => {
 
     let mail = {
       from: 'vladcancode.com',
-      to: 'vladykuz@hotmail.com',  //Change to email address that you want to receive messages on
+      to: 'vladcancode@gmail.com',  //Change to email address that you want to receive messages on
       subject: 'New Message from Contact Form',
       text: `${email} writes: ${message}`
     }
