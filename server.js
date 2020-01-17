@@ -43,7 +43,7 @@ app.post('/send-email', (req, res) => {
     console.log(message);
 
     let mail = {
-      from: 'vladcancode.com',
+      from: 'vladykuz@hotmail.com',
       to: 'vladcancode@gmail.com',  //Change to email address that you want to receive messages on
       subject: 'New Message from Contact Form',
       text: `${email} writes: ${message}`
